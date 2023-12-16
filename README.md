@@ -1,6 +1,6 @@
 I wanted to use orca
 
-looked at other configs, translated what is working best for me
+looked at other configs
 requires optimisation, but works
 
 should be working mostly with resonable quality
