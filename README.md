@@ -1,7 +1,7 @@
 I wanted to use orca
 
-I pulled varius code from configs for PrusaSlicer and Bambu
-Some KE settings, some SE settings
+looked at other configs, translated what is working best for me
+requires optimisation, but works
 
 should be working mostly with resonable quality
 
