@@ -109,7 +109,7 @@
         "0"
     ],
     "machine_pause_gcode": "M25",
-    "machine_start_gcode": "\nG28 ;Home\n\nG92 E0 ;Reset Extruder\nG1 Z2.0 F3000 ;Move Z Axis up\nG1 X10.1 Y20 Z0.28 F5000.0 ;Move to start position\nM109 S220.000000\nG1 X10.1 Y145.0 Z0.28 F1500.0 E15 ;Draw the first line\nG1 X10.4 Y145.0 Z0.28 F5000.0 ;Move to side a little\nG1 X10.4 Y20 Z0.28 F1500.0 E30 ;Draw the second line\nG92 E0  ;Reset Extruder\nG1 E-1.0000 F1800 ;Retract a bit\nG1 Z2.0 F3000 ;Move Z Axis up\nG1 E0.0000 F1800 ",
+    "machine_start_gcode": "\nG28 ;Home\nM413 S0 ; disable Power Loss Recovery\n\nM140 S[hot_plate_temp] ; set final bed temp\n\nG92 E0 ;Reset Extruder\nG1 Z2.0 F3000 ;Move Z Axis up\nG1 X10.1 Y20 Z0.28 F5000.0 ;Move to start position\nM109 S220.000000\n\nM190 S[hot_plate_temp] ; wait for bed temp to stabilize\nM104 S[nozzle_temperature] ; set final nozzle temp\nM109 S[nozzle_temperature] ; wait for nozzle temp to stabilize\n\nG1 X10.1 Y145.0 Z0.28 F1500.0 E15 ; Draw the first line\nG1 X10.4 Y145.0 Z0.28 F5000.0 ; Move to side a little\nG1 X10.4 Y20 Z0.28 F1500.0 E30 ; Draw the second line\n\nG92 E0  ;Reset Extruder\nG1 E-1.0000 F1800 ;Retract a bit\nG1 Z2.0 F3000 ;Move Z Axis up\nG1 E0.0000 F1800 ",
     "machine_unload_filament_time": "0",
     "manual_filament_change": "0",
     "max_layer_height": [
