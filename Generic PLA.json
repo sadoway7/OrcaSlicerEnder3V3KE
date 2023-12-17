@@ -106,7 +106,7 @@
         "; filament end gcode \n"
     ],
     "filament_flow_ratio": [
-        "0.98"
+        "1.03"
     ],
     "filament_is_support": [
         "0"
@@ -121,7 +121,7 @@
         "3"
     ],
     "filament_max_volumetric_speed": [
-        "12"
+        "13"
     ],
     "filament_minimal_purge_on_wipe_tower": [
         "15"
